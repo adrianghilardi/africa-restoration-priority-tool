@@ -32,7 +32,7 @@ Do not enter personal household data into the public repository. Aggregate socia
 
 ## Re-run one assumption
 
-Follow [SETUP.md](SETUP.md) and run `python scripts/run_all.py` first without changing the supplied configurations. Then copy the portable configuration to a named scenario, change one parameter, and select a new output directory; the runner's config override options select it. For example, changing `gain_threshold_MgDM_ha` from 10 to 20 changes screening classes, not the underlying growth trajectory. Retain the original and changed configurations and compare the sensitivity table and mapped area.
+Follow [SETUP.md](SETUP.md) and run `python scripts/run_all.py` first without changing the supplied configurations. Then copy `config/portable.json` to a named scenario, change one parameter, and select a new `output_dir`. For a restoration-only sensitivity, run `Rscript scripts/02_analyze.R config/your_scenario.json` then `Rscript scripts/04_validate_results.R config/your_scenario.json` from the code directory. This does not rerun unchanged climate/social context. If you use the full runner instead, supply fresh output destinations in all three module configurations, because none overwrites earlier results. For example, changing `gain_threshold_MgDM_ha` from 10 to 20 changes screening classes, not the underlying growth trajectory. Retain the original and changed configurations and compare the sensitivity table and mapped area.
 
 V1 sets `include_woody_savanna=true` to include native woodland recovery context alongside historical forest. A forest-only sensitivity sets it to `false`. Interpret both as historical ecological screens, never as approval to convert open ecosystems. Neither replaces a current no-go or eligibility assessment.
 
