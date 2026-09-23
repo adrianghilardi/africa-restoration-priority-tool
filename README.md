@@ -16,6 +16,8 @@ Code: [africa-restoration-priority-tool](https://github.com/adrianghilardi/afric
 
 [TNC_QUICKSTART.md](docs/TNC_QUICKSTART.md) explains how to use the outputs. [METHODS.md](docs/METHODS.md) explains the calculations. [DATA_DICTIONARY.md](docs/DATA_DICTIONARY.md) explains files, units and missing values. [V1_ASSUMPTIONS_AND_V2.md](docs/V1_ASSUMPTIONS_AND_V2.md) states the scope of the release.
 
+[View the two province-priority maps and example results](docs/EXAMPLE_OUTPUTS.md).
+
 ## Reproduce the delivered analysis
 
 Download the versioned data archive from the Zenodo record above and extract the supplied directory layout. Use the code from the matching release tag, not a moving default branch. A complete local delivery has this structure:

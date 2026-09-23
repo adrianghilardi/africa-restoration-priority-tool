@@ -23,6 +23,8 @@ The checker normally requires R 4.6.0. For an explicit compatibility trial, `--a
 
 ## Reproduce the delivery
 
+A desktop with 16 GB RAM and at least 20 GB of free working space is recommended for comfortable source installation, extraction and separate rerun outputs. These are practical allowances, not measured hard minimums. Runtime varies with disk speed and geospatial-library builds; keep temporary files on a local drive with enough space.
+
 Extract the Zenodo data archive so that `code`, `data`, `results`, `climate` and `social` are siblings. Then:
 
 ```text
