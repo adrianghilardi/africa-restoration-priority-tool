@@ -72,6 +72,7 @@ def build_plan(args,root):
         plan.extend([
             ("restoration",r+["scripts/02_analyze.R",str(rc)]),
             ("restoration_validation",r+["scripts/04_validate_results.R",str(rc)]),
+            ("priority_brief",r+["scripts/09_priority_brief.R",str(rc)]),
             ("climate",r+["scripts/03_prepare_climate.R",str(cc)]),
             ("social",r+["scripts/06_prepare_social.R",str(sc)]),
             ("social_validation",py+["tests/check_social_outputs.py",str(sout)])])

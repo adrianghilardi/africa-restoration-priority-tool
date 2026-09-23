@@ -7,6 +7,7 @@ Code: [africa-restoration-priority-tool](https://github.com/adrianghilardi/afric
 ## What the tool delivers
 
 - Province pressure priorities: **Critical**, **Major supply-shed**, **Fragile/local**, and **Lower priority**, using separately calculated landscape cut-points.
+- Ready-to-read province priority maps, short landscape briefs and CSV investigation shortlists in `results/priority_brief/`.
 - Nominal 1 km maps of conditional recovery from post-harvest 2030 to 2050, woodfuel-related BAU depletion, observed biomass change, and explicit screening classes.
 - Province, ecoregion and TNC planning-zone summaries with valid-data coverage; two landscape overview maps.
 - Native 0.25-degree climate context for SSP2-4.5 and SSP5-8.5, retaining model spread, significance and the 2040–2059 time window.

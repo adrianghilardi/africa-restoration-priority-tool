@@ -1,0 +1,19 @@
+{
+  "data_dir": "../data_from_original_runs",
+  "output_dir": "../results_from_original_runs",
+  "scratch_dir": "../scratch/input_preparation",
+  "branch_year": 2030,
+  "investment_start_year": 2020,
+  "end_year": 2050,
+  "source_mass_divisor_ha": 100,
+  "carbon_fraction": 0.47,
+  "include_woody_savanna": true,
+  "gain_threshold_MgDM_ha": 10,
+  "pressure_share_threshold": 0.25,
+  "ctrees_dir": "../upstream/ctrees/1km_agco2_2000_2025",
+  "tnc_zones": "../data/tnc_zones.gpkg",
+  "regions": [
+    {"id":"congo","name":"Congo Basin","tnc_name":"Congo Forest","source_dir":"../upstream/congo","adm1_path":"../data/congo/mofuss_adm1_fr.gpkg","ecoregions_path":"../data/congo/mofuss_ecoregions_fr.gpkg"},
+    {"id":"kaza","name":"KAZA","tnc_name":"KAZA","source_dir":"../upstream/kaza","adm1_path":"../data/kaza/mofuss_adm1_fr.gpkg","ecoregions_path":"../data/kaza/mofuss_ecoregions_fr.gpkg"}
+  ]
+}

@@ -44,7 +44,7 @@ class RunnerTests(unittest.TestCase):
                      "social.json":{"storage_dir":"social","tnc_zones":"data/tnc_zones.gpkg"}}
             for name,data in configs.items():(root/"config"/name).write_text(json.dumps(data))
             plan,_,outputs=runner.build_plan(runner.cli([]),root)
-            self.assertEqual([x[0] for x in plan][-5:],["restoration","restoration_validation","climate","social","social_validation"])
+            self.assertEqual([x[0] for x in plan][-6:],["restoration","restoration_validation","priority_brief","climate","social","social_validation"])
             self.assertEqual(len(outputs),3)
             self.assertFalse(any("download" in str(cmd) for _,cmd in plan))
     def test_failed_step_writes_failure_and_stops(self):

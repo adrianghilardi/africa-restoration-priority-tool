@@ -1,5 +1,11 @@
 # Data and code lineage — v1.0.0
 
+## Optional preparation from original runs
+
+Normal reproduction uses the archived `data/` inputs and `config/portable.json`; no original simulation drives are required. For custodians with the full original annual runs and global cTrees snapshots, copy and edit `config/upstream_example.json`, then run `Rscript scripts/01_prepare_inputs.R config/upstream_example.json`. It creates a new destination and never overwrites existing inputs. The `upstream/` paths in the provenance manifest are symbolic source identifiers, not download URLs. Complete original simulator inputs/annual runs are outside this postprocessing release; the archive includes all prepared inputs actually used by the tool.
+
+For optional boundary rebuilding, see the archived `boundaries/README.md`. For ecoregions, run `python scripts/07_download_ecoregions.py ../ecoregions` then `Rscript scripts/08_prepare_ecoregions.R config/portable.json ../ecoregions`; the latter writes a new `ecoregions/prepared/` folder and reads directly from the checksum-verified source ZIP. Existing prepared outputs are not overwritten. Boundary/ecoregion rebuilding is not part of the default one-command numerical reproduction.
+
 The archived bundle contains the prepared regional inputs used by this postprocessor plus the climate/social source snapshot and source metadata needed by its modules. It is not a duplicate of all global cTrees files or every annual upstream MoFuSS raster. Source hashes, prepared-file hashes and transformations link the minimal bundle to the supplied runs.
 
 | Source | Temporal/version support | Use and modification | Rights / attribution |
