@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+scratch/
+data/
+results*/
+climate/raw/
+climate/processed*/
+.r-library/
+.package-cache/
+ci-report.json

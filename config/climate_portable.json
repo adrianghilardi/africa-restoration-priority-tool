@@ -1,0 +1,54 @@
+{
+  "provider": "World Bank Climate Change Knowledge Portal",
+  "collection": "cmip6-x0.25",
+  "s3_endpoint": "https://wbg-cckp.s3.amazonaws.com",
+  "s3_prefix": "data",
+  "storage_dir": "../climate",
+  "scratch_dir": "../scratch/climate",
+  "tnc_zones": "../data/tnc_zones.gpkg",
+  "baseline": "1995-2014",
+  "periods": [
+    "2020-2039",
+    "2040-2059"
+  ],
+  "scenarios": [
+    "ssp245",
+    "ssp585"
+  ],
+  "variables": [
+    "tas",
+    "pr",
+    "cdd"
+  ],
+  "percentiles": [
+    "p10",
+    "median",
+    "p90"
+  ],
+  "workers": 2,
+  "regions": [
+    {
+      "id": "congo",
+      "name": "Congo Basin",
+      "tnc_pattern": "^Congo",
+      "bounds_wgs84": [
+        8.2495,
+        35.2503,
+        -18.2921,
+        13.3274
+      ]
+    },
+    {
+      "id": "kaza",
+      "name": "KAZA",
+      "tnc_pattern": "^KAZA$",
+      "bounds_wgs84": [
+        11.4187,
+        33.9624,
+        -29.2194,
+        -4.1226
+      ]
+    }
+  ],
+  "processed_subdir": "processed_reproduced"
+}

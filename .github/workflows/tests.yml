@@ -1,0 +1,39 @@
+name: Synthetic tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.6.0'
+      - name: System libraries for pinned R spatial packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgdal-dev libgeos-dev libproj-dev libudunits2-dev libssl-dev libabsl-dev libnetcdf-dev libtbb-dev cmake
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .r-library
+            .package-cache
+          key: ubuntu-24.04-r-4.6.0-${{ hashFiles('dependencies.lock.csv') }}
+      - name: Install exact direct and transitive package versions
+        run: Rscript scripts/install_dependencies.R
+      - name: Run synthetic tests only (no Zenodo data)
+        run: python scripts/run_all.py --tests-only --report ci-report.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: synthetic-test-report
+          path: ci-report.json
+          if-no-files-found: warn

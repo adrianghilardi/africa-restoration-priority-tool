@@ -1,0 +1,25 @@
+{
+  "data_dir": "../data",
+  "output_dir": "../results_reproduced",
+  "scratch_dir": "../scratch/restoration",
+  "branch_year": 2030,
+  "investment_start_year": 2020,
+  "end_year": 2050,
+  "source_mass_divisor_ha": 100,
+  "carbon_fraction": 0.47,
+  "include_woody_savanna": true,
+  "gain_threshold_MgDM_ha": 10,
+  "pressure_share_threshold": 0.25,
+  "regions": [
+    {
+      "id": "congo",
+      "name": "Congo Basin",
+      "tnc_name": "Congo Forest"
+    },
+    {
+      "id": "kaza",
+      "name": "KAZA",
+      "tnc_name": "KAZA"
+    }
+  ]
+}

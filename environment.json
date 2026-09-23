@@ -1,0 +1,8 @@
+{
+  "recorded_platform": "Windows x86_64",
+  "R": "4.6.0",
+  "R_packages": {"terra":"1.9-27", "jsonlite":"2.0.0", "digest":"0.6.39", "exactextractr":"0.10.1", "sf":"1.1-1"},
+  "Python_minimum": "3.10",
+  "Python_external_packages": [],
+  "note": "Recorded tested environment, not a dependency lockfile. GDAL/PROJ/GEOS versions are recorded by the validation scripts."
+}

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite this version-specific archive and the upstream datasets listed in docs/DATA_SOURCES.md."
+type: software
+title: "Restoration Priority Tool for Congo Basin and KAZA"
+version: "1.0.0"
+date-released: "2026-09-23"
+authors:
+  - family-names: "Ghilardi"
+    given-names: "Adrian"
+    orcid: "https://orcid.org/0000-0002-7286-0670"
+repository-code: "https://github.com/adrianghilardi/africa-restoration-priority-tool"
+doi: "10.5281/zenodo.22914522"
+url: "https://doi.org/10.5281/zenodo.22914522"
+license: MIT
+abstract: >-
+  Reproducible MoFuSS-based landscape screening for woodfuel pressure,
+  conditional biomass recovery, climate exposure and population/poverty context in Congo
+  Basin and KAZA. This postprocessor preserves physical quantities,
+  model assumptions, scenario distinctions and data coverage. Its outputs
+  support prioritization discussions, not site approval, causal intervention
+  estimates or carbon-credit accounting.
+keywords:
+  - restoration
+  - MoFuSS
+  - woodfuel
+  - Congo Basin
+  - KAZA
+  - spatial prioritization
+  - reproducibility

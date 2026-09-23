@@ -1,0 +1,12 @@
+{
+  "storage_dir": "../social",
+  "scratch_dir": "../scratch/social",
+  "tnc_zones": "../data/tnc_zones.gpkg",
+  "processed_subdir": "processed_reproduced",
+  "poverty_cutoff_year": 2026,
+  "poverty_country_codes": ["AGO","BDI","BWA","CAF","CMR","COD","COG","GAB","GNQ","KEN","MWI","MOZ","NAM","RWA","SSD","TCD","TZA","UGA","ZAF","ZMB","ZWE","SDN","NGA","NER"],
+  "periods": ["2020-2039", "2040-2059"],
+  "scenarios": ["ssp245", "ssp585"],
+  "poverty_sensitivities": [{"id":"constant_national_rate","rate_multiplier":1.0},{"id":"half_national_rate","rate_multiplier":0.5}],
+  "regions": [{"id":"congo","name":"Congo Basin","tnc_pattern":"^Congo"},{"id":"kaza","name":"KAZA","tnc_pattern":"^KAZA$"}]
+}
