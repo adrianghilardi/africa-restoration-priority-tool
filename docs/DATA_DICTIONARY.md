@@ -21,10 +21,10 @@ Paths are relative to the delivery root. Region identifiers are `congo` and `kaz
 | `investment_baseline_2020_mcNNN.tif` | Within-year pre-harvest 2020 stock; model MgDM per nominal cell. |
 | `harvest_2031_2050_mcNNN.tif`, `harvest_2020_2050_mcNNN.tif` | Harvest summed over the named inclusive window; model MgDM per nominal cell. |
 | `observed_2000_MgDM_ha.tif`, `observed_2025_MgDM_ha.tif` | Regional cTrees snapshots converted from documented MgCO2/ha using `(12/44)/0.47`; bilinearly projected; negative estimates become missing. |
-| `mofuss_adm1_fr.gpkg`, `mofuss_ecoregions_fr.gpkg` | Province/ecoregion geometry inputs. Only identity and geometry are analytical inputs; inherited result attributes are not current results. |
+| `mofuss_adm1_fr.gpkg`, `mofuss_ecoregions_fr.gpkg` | Fresh geoBoundaries province and RESOLVE ecoregion inputs. Identity/geometry and applicable source licence fields only; no legacy analytical attributes. Historical filenames are retained for interface compatibility. |
 | `years.txt`, `Resolution.csv`, `InputPara.csv`, `parameters.csv` | Provenance of time indexing and supplied run setup; not a complete upstream simulation environment. |
 
-`data/tnc_zones.gpkg` contains the selected planning-zone geometry inputs. `manifest_sha256.csv` verifies the prepared bundle. A source-provenance table links input roles to source identifiers and hashes; source identifiers in a public release should be portable, not private drive paths.
+`data/tnc_zones.gpkg` contains only Congo/KAZA interest, influence and operations geometries with Name fields, not QGIS style metadata. `manifest_sha256.csv` verifies the 50-file prepared bundle. A source-provenance table links input roles to symbolic upstream identifiers and hashes; these are not private drive paths or promises that all global upstream sources are archived here.
 
 The default historical screen includes forest and woody savanna. It does not approve tree planting in natural grassland/savanna. Unused upstream protected-area layers are not required by this analysis and are not automatically part of the public bundle.
 
